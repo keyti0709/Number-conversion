@@ -1,3 +1,4 @@
+/* Written and Debugged by Kartikey Tiwari | kartikey0402@gmail.com */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 * {
@@ -62,6 +63,8 @@ select{
     margin: 10px;
     font-size: large;
     background-color: #75e6da;
+    outline: none;
+    border-radius: 3px;
     border: none;
 }
 .from{
@@ -105,3 +108,4 @@ input[type="text"]{
     background-color: #20948b;
     border: none;
 }
+/* Written and Debugged by Kartikey Tiwari | kartikey0402@gmail.com */
