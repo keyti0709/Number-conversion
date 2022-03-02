@@ -1,3 +1,4 @@
+'use strict';
 function swapper(){
     let from=document.getElementById('from').value;
     let to=document.getElementById('to').value;
@@ -26,7 +27,7 @@ function convert(){
     else
     finalyOut=bin(getVal);
 
-    if(isNaN(finalyOut))
+    if(finalyOut==""||finalyOut=="NaN")
     {
         document.getElementById("in").style.backgroundColor="red";
         document.getElementById("in").style.border="solid";
@@ -42,6 +43,12 @@ function convert(){
 }
 function dec(getVal)
 {
+    console.log(getVal);
+    const check="0123456789";
+    for(let i=0;i<getVal.length;i++)
+    if(!(check.includes(getVal.charAt(i))))
+       return ("");
+
     if(document.getElementById('to').selectedIndex==1)
         return dec2hex(getVal);
     else if(document.getElementById('to').selectedIndex==2)
@@ -67,6 +74,11 @@ function dec(getVal)
 }
 function oct(getVal)
 {
+    const check="012345678";
+    for(let i=0;i<getVal.length;i++)
+    if(!(check.includes(getVal.charAt(i)))) 
+        return ("");
+
     if(document.getElementById('to').selectedIndex==0)
         return oct2dec(getVal);
     else if(document.getElementById('to').selectedIndex==1)
@@ -78,6 +90,7 @@ function oct(getVal)
 
     function oct2dec(x)
     {
+        console.log(parseInt(x,8).toString(10));
         return parseInt(x,8).toString(10);
     }
     function oct2hex(x)
@@ -91,6 +104,12 @@ function oct(getVal)
 }
 function hex(getVal)
 {
+    getVal=getVal.toUpperCase();
+    const check="0123456789ABCDEF";
+    for(let i=0;i<getVal.length;i++)
+    if(!(check.includes(getVal.charAt(i))))
+        return ("");
+
     if(document.getElementById('to').selectedIndex==0)
         return hex2dec(getVal);
     else if(document.getElementById('to').selectedIndex==2)
@@ -115,6 +134,11 @@ function hex(getVal)
 }
 function bin(getVal)
 {
+    const check="01";
+    for(let i=0;i<getVal.length;i++)
+    if(!(check.includes(getVal.charAt(i))))
+        return ("");
+
     if(document.getElementById('to').selectedIndex==0)
         return bin2dec(getVal);
     else if(document.getElementById('to').selectedIndex==1)
@@ -126,6 +150,7 @@ function bin(getVal)
 
     function bin2dec(x)
     {
+        console.log(parseInt(x,2).toString(10));
         return parseInt(x,2).toString(10);
     }
     function bin2hex(x)
@@ -137,3 +162,4 @@ function bin(getVal)
         return parseInt(x,2).toString(8);
     }
 }
+    // Written and Debugged by Kartikey Tiwari | kartikey0402@gmail.com
