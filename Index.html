@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Number Counter</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="main2">
+            <h1>Number CoversioN</h1>
+        </div>
+        <div class="main">
+            <div class="selection">
+                <div class="from">
+                    <label for="from">From</label>
+                    <br>
+                    <select name="from" id="from">
+                        <option value="1">Decimal</option>
+                        <option value="2">Hexadecimal</option>
+                        <option value="3">Octal</option>
+                        <option  value="4">Binary</option>
+                    </select>
+                </div>
+                <div class="xchange" style="margin:10px">
+                    <button id="swap" onclick="swapper()"><i class="fa fa-exchange" style="font-size:36px"></i></button>
+                </div>
+                <div class="to">
+                    <label for="to">To</label>
+                    <br>
+                    <select name="to" id="to">
+                        <option value="1">Decimal</option>
+                        <option value="2">Hexadecimal</option>
+                        <option value="3">Octal</option>
+                        <option selected value="4">Binary</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inout">
+                <input type="text" name="in" id="in" placeholder="Enter the Value"/>
+                <input type="text" name="out" id="out" placeholder="Result" readonly/>
+            </div>
+            <div class="control">
+                <button onclick="convert()" id="convert">Convert</button>
+            </div>
+        </div>
+    </body>
+</html>
