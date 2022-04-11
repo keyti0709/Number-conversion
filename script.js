@@ -43,7 +43,6 @@ function convert(){
 }
 function dec(getVal)
 {
-    console.log(getVal);
     const check="0123456789";
     for(let i=0;i<getVal.length;i++)
     if(!(check.includes(getVal.charAt(i))))
@@ -60,7 +59,6 @@ function dec(getVal)
 
         function dec2bin(x)
         {
-            console.log(parseInt(x,10).toString(2));
             return parseInt(x,10).toString(2);
         }
         function dec2hex(x)
@@ -90,7 +88,6 @@ function oct(getVal)
 
     function oct2dec(x)
     {
-        console.log(parseInt(x,8).toString(10));
         return parseInt(x,8).toString(10);
     }
     function oct2hex(x)
@@ -150,7 +147,6 @@ function bin(getVal)
 
     function bin2dec(x)
     {
-        console.log(parseInt(x,2).toString(10));
         return parseInt(x,2).toString(10);
     }
     function bin2hex(x)
