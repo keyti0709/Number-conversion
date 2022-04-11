@@ -29,7 +29,7 @@ function convert(){
 
     if(finalyOut==""||finalyOut=="NaN")
     {
-        document.getElementById("in").style.backgroundColor="red";
+        document.getElementById("in").style.backgroundColor="pink";
         document.getElementById("in").style.border="solid";
         document.getElementById("in").style.borderColor = "red";
         document.getElementById('out').value=null;
